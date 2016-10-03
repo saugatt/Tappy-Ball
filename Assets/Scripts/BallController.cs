@@ -21,7 +21,7 @@ public class BallController : MonoBehaviour {
 		if (!started) {
 			//GetMouseButtonDown also works for the touchscreen
 			if (Input.GetMouseButtonDown (0)) {
-
+				UnityAdManager.instance.ShowAd (); 
 				started = true;
 				rb.isKinematic = false;
 			}
