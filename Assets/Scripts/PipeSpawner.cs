@@ -5,10 +5,10 @@ public class PipeSpawner : MonoBehaviour {
 
 	public float maxYpos;
 	public float SpwanTime;
-	public GameObject Pipe;
+	public GameObject pipe;
 
 	// Use this for initialization
-	void Start () {
+	void Start () { //Commenting startSpawning Pipes since we are calling it from game manager
 		StartSpawningPipes ();	
 	}
 	
@@ -25,8 +25,8 @@ public class PipeSpawner : MonoBehaviour {
 		CancelInvoke ("SpawnPipe");
 	}
 
-	void SpwanPipe() {
-		Instantiate (Pipe, new Vector3 (transform.position.x, Random.Range (-maxYpos, maxYpos), 0), Quaternion.identity); 
+	void SpawnPipe() {
+		Instantiate (pipe, new Vector3 (transform.position.x, Random.Range (4, 10), 0), Quaternion.identity); 
 		// Quaternion.identity means no rotation to the pipe
 	}
 }
